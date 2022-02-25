@@ -1,0 +1,41 @@
+﻿@page
+@model on_thi_ktlt.Pages.MH_SAN_PHAMModel
+@using on_thi_ktlt.ENTITY;
+@using on_thi_ktlt.DAS;
+@using System.IO;
+@using Newtonsoft.Json;
+
+
+<div>
+    <form method="Post">
+        <label>từ khóa</label><br />
+        <input type="text" name="tu_khoa" value="@Model.tu_khoa" /><br />
+        <input type="submit" value="tìm kiếm" />
+    </form>
+</div>
+
+<div>
+    <a href="/MH_THEM_SAN_PHAM">add new</a>
+</div>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>price</th>
+    </tr>
+    @foreach (var sp in Model.ds)
+    {
+        <tr>
+            <td>@sp.id</td>
+            <td>@sp.name</td>
+            <td>@sp.price</td>
+            <td>
+                <a href="/MH_SUA_SAN_PHAM?Pid=@sp.id">Sửa</a>
+                <a href="/MH_XOA_SAN_PHAM?Pid=@sp.id">Xóa </a>
+            </td>
+        </tr>
+    }
+</table>
+

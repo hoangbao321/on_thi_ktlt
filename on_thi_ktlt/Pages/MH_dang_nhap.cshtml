@@ -1,0 +1,13 @@
+﻿@page
+@model on_thi_ktlt.Pages.MH_dang_nhapModel
+@{
+
+}
+<form method="Post">
+    <label>tên đăng nhập</label><br />
+    <input type="text" name="id" value="@Model.id"/><br />
+    <label>pass</label><br />
+    <input type="text" name="pass" value="@Model.pass"/><br />
+    <input type="submit" name="Submit" /><br />
+    @Model.chuoi
+</form>

@@ -1,0 +1,14 @@
+﻿@page
+@model on_thi_ktlt.Pages.XOA_SUA.MH_SUA_SAN_PHAMModel
+@{
+    Layout = null;
+}
+<div>
+    <form method="Post">
+        <label>name</label><br />
+        <input type="text" name="name" value="@Model.hien_thi_sua.name" /><br />
+        <label>price</label><br />
+        <input type="text" name="price" value="@Model.hien_thi_sua.price"  /><br />
+        <input type ="submit" value="sửa" />
+    </form>
+</div>
